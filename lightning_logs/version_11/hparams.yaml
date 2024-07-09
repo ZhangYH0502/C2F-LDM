@@ -1,0 +1,27 @@
+opts: !!python/object:argparse.Namespace
+  accelerator: gpu
+  accumulate_grad_batches: 2
+  base_learning_rate: 5.0e-05
+  batch_size: 1
+  command: test
+  data_root: /research/deepeye/zhangyuh/data/SIGF_Seq/
+  devices:
+  - 0
+  exp_name: vqldm_2d_test
+  first_stage_ckpt: results/vqgan/vqgan_2d_2023-11-28T14-36-30/lightning_logs/version_0/checkpoints/model-epoch=81-val_rec_loss=0.19208908081054688.ckpt
+  image_save_dir: results/vqldm/vqldm_2d_test_2023-12-01T00-04-27/rect_images_2
+  image_size: !!python/tuple
+  - 256
+  - 256
+  latent_channel: 4
+  latent_size: !!python/tuple
+  - 32
+  - 32
+  limit_train_batches: 1000
+  limit_val_batches: 100
+  max_epochs: 200
+  num_workers: 0
+  profiler: simple
+  reproduce: false
+  result_root: results/vqldm
+  scale_lr: true

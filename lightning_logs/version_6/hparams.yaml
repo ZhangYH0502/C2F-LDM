@@ -1,0 +1,21 @@
+opts: !!python/object:argparse.Namespace
+  accelerator: gpu
+  accumulate_grad_batches: 4
+  base_learning_rate: 4.5e-06
+  batch_size: 2
+  command: test
+  data_root: /research/deepeye/zhangyuh/data/SIGF-Total
+  devices:
+  - 0
+  exp_name: vqgan_2d
+  image_size: !!python/tuple
+  - 256
+  - 256
+  limit_train_batches: 10000
+  limit_val_batches: 10000
+  max_epochs: 200
+  num_workers: 0
+  profiler: simple
+  reproduce: false
+  result_root: results/vqgan
+  scale_lr: true
